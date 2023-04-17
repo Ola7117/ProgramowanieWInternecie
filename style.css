@@ -133,6 +133,7 @@ ul {
 .navbar {
     font-size: 24px;
     letter-spacing: 4px;
+    z-index: 2;
 }
 
 .quote {
@@ -140,6 +141,7 @@ ul {
     font-style: italic;
     opacity: 80%;
     overflow: hidden;
+    z-index: 1;
 }
 
 .right1 {
