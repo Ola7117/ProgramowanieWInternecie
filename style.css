@@ -290,6 +290,51 @@ ul {
     .right1 {
         bottom: 10%;
     }
+
+    .row {
+        margin: 0px;
+    }
+
+    .column {
+        padding: 0px;
+        font-size: 18px;
+        text-align: justify;
+        width: 100%;
+    }
+
+    .left2.upper {
+        padding: 40px 40px 0px 40px;
+    }
+
+    .left2.upper {
+        position: absolute;
+        z-index: 2;
+    }
+
+    .right2.upper {
+        opacity: 70%;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .right2.lower {
+        padding: 40px 40px 0px 40px;
+    }
+
+    .right2.lower {
+        position: absolute;
+        z-index: 2;
+    }
+
+    .left2.lower {
+        opacity: 70%;
+        position: absolute;
+        z-index: 1;
+    }
+
+    footer {
+        margin-top: 0px;
+    }
 }
 
 .stripe1, .stripe2, .stripe3 {
