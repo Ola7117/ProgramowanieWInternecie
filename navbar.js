@@ -1,10 +1,10 @@
 function toggleMenu(icon) {
     icon.classList.toggle("switch");
-    var element = document.getElementById("navbar");
-    if (element.className === "navbar") {
-        element.className += " open";
+    var navbar = document.getElementById("navbar");
+    if (navbar.className === "navbar") {
+        navbar.className += " open";
     }
     else {
-        element.className = "navbar";
+        navbar.className = "navbar";
     }
 }

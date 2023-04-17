@@ -175,12 +175,17 @@ ul {
         display: none;
     }
 
+    .open .blankSpace {
+        display: block;
+        height: 70px;
+    }
+
     .menuIcon {
         display: block;
         float: right;
     }
 
-    .menuIcon a:hover {
+    .menuIcon:hover, .open .menuIcon:hover, .open nav ul li a:hover {
         background-color: lightgray;
     }
 
@@ -189,6 +194,7 @@ ul {
     }
 
     .open .menuIcon {
+        background-color: rgb(144, 156, 135);
         position: absolute;
         right: 0;
         top: 0;
@@ -204,7 +210,10 @@ ul {
     }
 
     .open nav ul li a {
+        background-color: rgb(144, 156, 135);
+        float: right;
         text-align: right;
+        width: 200px;
     }
 }
 
@@ -257,13 +266,11 @@ ul {
         float: none;
     }
 
-    .open nav ul li {
-        width: 100%;
-    }
-
     .open nav ul li a {
         background-color: rgb(144, 156, 135);
+        float: left;
         text-align: left;
+        width: 100%;
     }
 }
 
