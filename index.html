@@ -5,20 +5,21 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Strona Aleksandry Hinc</title>
 		<link rel="stylesheet" href="style.css">
-		<script src="navbar.js"></script> 
+		<script src="navbar.js"></script>
+		<script src="spa.js"></script>
 	</head>
 	<body>
 		<div class="top">
 			<div class="navbar" id="navbar">
 				<header>
-					<a href="index.html" class="homeIcon"></a>
-					<a href="index.html" class="homeText">Strona główna</a>
+					<a href="#home1" class="homeIcon" onclick="changeContentToHome()"></a>
+					<a href="#home1" class="homeText" onclick="changeContentToHome()">Strona główna</a>
 				</header>
 				<div class="blankSpace"></div>
 				<nav>
 					<ul>
-						<li><a href="#about">Informacje</a></li>
-						<li><a href="#contact">Kontakt</a></li>
+						<li><a href="#aboutStart" onclick="changeContentToAbout()">Informacje</a></li>
+						<li><a href="#contactStart" onclick="changeContentToContact()">Kontakt</a></li>
 					</ul>
 					<a href="javascript:void(0);" class="menuIcon" onclick="toggleMenu(this)">
 						<div class="stripe1"></div>
@@ -34,19 +35,18 @@
 				Ac turpis egestas sed tempus urna et. Mattis rhoncus urna neque viverra justo nec ultrices. Donec pretium vulputate sapien nec sagittis aliquam malesuada bibendum.
 			</div>
 		</div>
-		<div class="row">
+		<div class="row" id="home1">
 			<div class="column left2 upper">
 				<h1>Maecenas rhoncus pretium</h1>
 				<p>
 					Id eu nisl nunc mi ipsum. Et magnis dis parturient montes nascetur ridiculus mus mauris vitae. Dui faucibus in ornare quam. Lectus proin nibh nisl condimentum id venenatis a condimentum vitae. Elementum integer enim neque volutpat ac. Placerat vestibulum lectus mauris ultrices. Laoreet suspendisse interdum consectetur libero id.
 				</p>
-				<button type="button" id="button1">Więcej</button>
 			</div>
 			<div class="column right2 upper">
 				<img src="dog2.png" alt="dog2">
 			</div>
 		</div>
-		<div class="row">
+		<div class="row" id="home2">
 			<div class="column left2 lower">
 				<img src="dog3.png" alt="dog3">
 			</div>
@@ -55,8 +55,28 @@
 				<p>
 					Mollis nunc sed id semper risus in hendrerit. Hac habitasse platea dictumst vestibulum rhoncus est pellentesque. Sit amet purus gravida quis blandit turpis. Dolor magna eget est lorem ipsum dolor sit amet. Integer eget aliquet nibh praesent. Blandit libero volutpat sed cras ornare arcu. Dictum non consectetur a erat nam at lectus. Donec enim diam vulputate ut pharetra sit.
 				</p>
-				<button type="button" id="button2">Więcej</button>
 			</div>
+		</div>
+		<div id="about" class="about">
+			<h1 id="aboutStart">About</h1>
+			<p> 
+				Nam a leo et nunc suscipit finibus. Duis in sem euismod, lacinia leo et, iaculis purus. In hac habitasse platea dictumst. Quisque interdum dictum nulla. Fusce egestas mauris a risus condimentum, vitae iaculis felis auctor. Etiam a imperdiet leo. Aliquam eu orci velit. Curabitur sagittis ipsum eu urna consectetur varius. Suspendisse lacinia pretium dapibus. Sed fringilla felis velit, varius consequat dolor viverra facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ut vulputate tortor, sit amet blandit est. Integer vitae tortor euismod, sagittis diam eget, ultrices sapien. Integer non ligula magna. Duis lobortis sodales sapien ut commodo. Nullam et ipsum ipsum.
+			</p>
+			<p>
+				Etiam molestie sem malesuada tortor dictum vulputate. Aenean ultricies ultricies augue non aliquet. Integer suscipit erat sit amet blandit volutpat. Aenean vestibulum, diam eu hendrerit tincidunt, tortor velit fringilla nisi, lacinia maximus odio arcu at nisl. In euismod neque sit amet sem pretium, at aliquam magna semper. Proin ullamcorper non quam vel accumsan. Quisque a pharetra neque. Mauris et bibendum massa, in vehicula sem. Cras nec lorem faucibus, dapibus lorem ac, semper diam. Ut lacinia fermentum quam nec eleifend. Aliquam sodales ex in leo auctor dignissim. Nulla interdum neque a odio pretium, non viverra ex vestibulum. Proin porttitor gravida rhoncus. Etiam diam ipsum, euismod et leo nec, mattis porttitor arcu. Etiam in justo a nisl ullamcorper mollis a ut ipsum.
+			</p>
+			<p>
+				Sed sed leo at elit vehicula tristique. Nunc ut neque bibendum nibh sagittis elementum. Etiam fermentum lorem semper libero facilisis, a aliquam mauris malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae interdum dui, dictum consectetur dolor. Cras luctus metus et ipsum dapibus, interdum tincidunt justo accumsan. Duis sem ex, pharetra et accumsan ac, lobortis vel diam. Nulla a dolor sed augue laoreet convallis. Phasellus dictum ac turpis non efficitur. Nunc ut metus id diam accumsan tristique. Duis volutpat est est, et ultricies urna semper ut. Suspendisse aliquam nunc diam, quis condimentum tortor commodo non. Etiam sit amet odio congue, sodales nunc vitae, maximus dui. Nulla facilisi.
+			</p>
+		</div>
+		<div id="contact" class="contact">
+			<h1 id="contactStart">Contact</h1>
+			<ul>
+				<li><a href="mailto:aleksandra.hinc@example.com">aleksandra.hinc@example.com</a></li>
+				<li>Aenean ac nunc eu elit volutpat gravida a in quam.</li>
+				<li>Maecenas malesuada leo id tellus rutrum, id porta augue placerat.</li>
+				<li>Proin ultricies lacus ut blandit commodo.</li>
+			</ul>
 		</div>
 		<footer>
 			<p>&copy;2023 Aleksandra Hinc</p>

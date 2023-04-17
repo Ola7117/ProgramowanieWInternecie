@@ -81,7 +81,7 @@ img {
     width: 100%;	
 }
 
-ul {
+.navbar ul {
     float: right;
     list-style-type: none;
 }
@@ -156,6 +156,7 @@ ul {
 }
 
 .row {
+    display: block;
     height: 100%;
 }
 
@@ -458,4 +459,41 @@ ul {
 
 .switch .stripe3 {
     transform: translate(0, -13px) rotate(45deg);
+}
+
+.about {
+    display: none;
+    padding: 100px;
+    text-align: justify;
+}
+
+.about p {
+    margin-bottom: 20px;
+}
+
+.contact {
+    display: none;
+}
+
+.contact h1 {
+    padding: 100px 100px 20px 90px;
+} 
+
+.contact ul {
+    padding: 0px 100px 100px 100px;
+    margin-bottom: 120px;
+}
+
+.contact ul li {
+    width: 100%;
+}
+
+.contact ul li a {
+    padding: 0;
+    text-align: left;
+    text-decoration: underline;
+}
+
+.contact ul li a:hover {
+    background-color: transparent;
 }
