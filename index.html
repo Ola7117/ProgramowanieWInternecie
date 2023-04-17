@@ -5,18 +5,26 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Strona Aleksandry Hinc</title>
 		<link rel="stylesheet" href="style.css">
+		<script src="navbar.js"></script> 
 	</head>
 	<body>
 		<div class="top">
-			<div class="navbar">
+			<div class="navbar" id="navbar">
 				<header>
-					<a href="index.html">Strona Aleksandry Hinc</a>
+					<a href="index.html" class="homeIcon"></a>
+					<a href="index.html" class="homeText">Strona główna</a>
 				</header>
+				<div class="blankSpace"></div>
 				<nav>
 					<ul>
 						<li><a href="#about">Informacje</a></li>
 						<li><a href="#contact">Kontakt</a></li>
 					</ul>
+					<a href="javascript:void(0);" class="menuIcon" onclick="toggleMenu(this)">
+						<div class="stripe1"></div>
+						<div class="stripe2"></div>
+						<div class="stripe3"></div>
+					</a>
 				</nav>
 			</div>
 			<div class="quote left1">

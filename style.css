@@ -86,12 +86,33 @@ ul {
     list-style-type: none;
 }
 
+.blankSpace {
+    display: none;
+}
+
 .column {
     float: left;
     font-size: 18px;
     height: 100%;
     text-align: justify;
     width: 50%;
+}
+
+.homeIcon {
+    background-image: url("home.png");
+    background-origin: content-box;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: none;
+    height: 70px;
+    padding: 10px;
+    width: 70px;
+}
+
+.menuIcon {
+    display: none;
+    padding: 10.5px;
 }
 
 .left1, .right1 {
@@ -149,55 +170,119 @@ ul {
     height: 100%;
 }
 
+@media screen and (max-width: 640px) {
+    nav ul {
+        display: none;
+    }
 
-/* Jigsaw */
+    .menuIcon {
+        display: block;
+        float: right;
+    }
 
-#board {
-    align-content: center;
-    background-color: lightgray;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    height: 374px;
-    width: 550px;
+    .menuIcon a:hover {
+        background-color: lightgray;
+    }
+
+    .open {
+        position: relative;
+    }
+
+    .open .menuIcon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .open nav ul {
+        display: block;
+        float: right;
+    }
+
+    .open nav ul li {
+        width: 100%;
+    }
+
+    .open nav ul li a {
+        text-align: right;
+    }
 }
 
-#board img {
-    height: 86px;
-    width: 104px;
-    border-color: dimgray;
-    border-style: solid;
-    border-width: 1px;
+@media screen and (max-width: 480px) {
+    nav ul {
+        display: none;
+    }
+
+    .open .blankSpace {
+        background-color: rgb(203, 218, 192);
+        display: block;
+        height: 70px;
+    }
+
+    .homeText {
+        display: none;
+    }
+
+    .homeIcon {
+        display: block;
+        float: left;
+    }
+
+    .menuIcon {
+        display: block;
+        float: right;
+    }
+
+    .menuIcon:hover, .open .homeIcon:hover, .open .menuIcon:hover, .open nav ul li a:hover {
+        background-color: lightgray;
+    }
+
+    .open {
+        position: relative;
+    }
+
+    .open .homeIcon {
+        background-color: rgb(203, 218, 192);
+    }
+
+    .open .menuIcon {
+        background-color: rgb(144, 156, 135);
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .open nav ul {
+        display: block;
+        float: none;
+    }
+
+    .open nav ul li {
+        width: 100%;
+    }
+
+    .open nav ul li a {
+        background-color: rgb(144, 156, 135);
+        text-align: left;
+    }
 }
 
-#pieces {
-    display: flex;
-    flex-wrap: wrap;
-    float: left;
-    justify-content: center;
-    padding: 2.5%;
-    width: 50%;
+.stripe1, .stripe2, .stripe3 {
+    background-color: black;
+    height: 3px;
+    margin: 10px 7px;
+    width: 35px;
+    transition: 0.5s;
 }
 
-#pieces img {
-    height: 86px;
-    width: 104px;
+.switch .stripe1 {
+    transform: translate(0, 13px) rotate(-45deg);
 }
 
-.half {
-    align-content: center;
-    justify-content: center;
-    float: left;
-    height: 100%;
-    width: 50%;
+.switch .stripe2 {
+    opacity: 0;
 }
 
-.outer_board {
-    align-content: center;
-    background-color: rgb(203, 218, 192);
-    display: flex;
-    flex-wrap: wrap;
-    height:100%;
-    justify-content: center;
-    width:50%;
+.switch .stripe3 {
+    transform: translate(0, -13px) rotate(45deg);
 }
