@@ -138,6 +138,7 @@ ul {
 .quote {
     font-size: 18px;
     font-style: italic;
+    opacity: 80%;
     overflow: hidden;
 }
 
@@ -271,6 +272,23 @@ ul {
         float: left;
         text-align: left;
         width: 100%;
+    }
+
+    .left1, .right1 {
+        left: 0;
+        right: 0;
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .left1 {
+        top: 20%;
+    }
+
+    .right1 {
+        bottom: 10%;
     }
 }
 
