@@ -30,3 +30,14 @@ function changeContentToContact() {
     about.style.display = "none";
     contact.style.display = "block";
 }
+
+function toggleMenu(icon) {
+    icon.classList.toggle("switch");
+    var navbar = document.getElementById("navbar");
+    if (navbar.className === "navbar") {
+        navbar.className += " open";
+    }
+    else {
+        navbar.className = "navbar";
+    }
+}
