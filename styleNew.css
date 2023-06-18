@@ -28,6 +28,7 @@ footer {
     font-size: 16px;
     justify-content: center;
     margin-top: 100px;
+    overflow: hidden;
     padding: 10px 0px;
     text-align: center;
     width: 100%;
@@ -94,6 +95,7 @@ img {
     float: left;
     font-size: 18px;
     height: 100%;
+    overflow: hidden;
     text-align: justify;
     width: 50%;
 }
@@ -115,18 +117,7 @@ img {
     padding: 10.5px;
 }
 
-.left1, .right1 {
-    position: absolute;
-}
-
-.left1 {
-    left: 20px;
-    right: 70%;
-    text-align: left;
-    top: 20%;
-}
-
-.left2 {
+.left {
     padding: 100px 40px 0px 100px;
 }
 
@@ -136,22 +127,16 @@ img {
     z-index: 2;
 }
 
-.quote {
-    font-size: 18px;
-    font-style: italic;
-    opacity: 80%;
-    overflow: hidden;
+.name {
+    left: 20px;
+    font-size: 70px;
+    position: absolute;
+    text-align: left;
+    top: 50%;
     z-index: 1;
 }
 
-.right1 {
-    bottom: 200px;
-    left: 70%;
-    right: 20px;
-    text-align: right;
-}
-
-.right2 {
+.right {
     padding: 100px 100px 0px 40px;
 }
 
@@ -167,11 +152,17 @@ img {
 }
 
 .top {
-    background-image: url("dog1.png");
+    background-image: url("mainBear1.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
+}
+
+@media screen and (max-width: 1100px) {
+    .name {
+        width: 60%;
+    }
 }
 
 @media screen and (max-width: 800px) {
@@ -227,31 +218,31 @@ img {
         width: 100%;
     }
 
-    .left2.upper {
+    .left.upper {
         padding: 120px 120px 0px 120px;
     }
 
-    .left2.upper {
+    .left.upper {
         position: absolute;
         z-index: 2;
     }
 
-    .right2.upper {
+    .right.upper {
         opacity: 70%;
         position: absolute;
         z-index: 1;
     }
 
-    .right2.lower {
+    .right.lower {
         padding: 120px 120px 0px 120px;
     }
 
-    .right2.lower {
+    .right.lower {
         position: absolute;
         z-index: 2;
     }
 
-    .left2.lower {
+    .left.lower {
         opacity: 70%;
         position: absolute;
         z-index: 1;
@@ -275,6 +266,16 @@ img {
 
     .menuIcon:hover, .open .menuIcon:hover, .open nav ul li a:hover {
         background-color: lightgray;
+    }
+
+    .name {
+        left: 0;
+        right: 0;
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+        top: 10%;
+        width: 100%;
     }
 
     .open {
@@ -302,23 +303,6 @@ img {
         float: right;
         text-align: right;
         width: 200px;
-    }
-
-    .left1, .right1 {
-        left: 0;
-        right: 0;
-        padding-left: 20px;
-        padding-right: 20px;
-        text-align: center;
-        width: 100%;
-    }
-
-    .left1 {
-        top: 20%;
-    }
-
-    .right1 {
-        bottom: 10%;
     }
 }
 
@@ -351,6 +335,10 @@ img {
         background-color: lightgray;
     }
 
+    .name {
+        font-size: 40px;       
+    }
+
     .open {
         position: relative;
     }
@@ -378,23 +366,6 @@ img {
         width: 100%;
     }
 
-    .left1, .right1 {
-        left: 0;
-        right: 0;
-        padding-left: 20px;
-        padding-right: 20px;
-        text-align: center;
-        width: 100%;
-    }
-
-    .left1 {
-        top: 20%;
-    }
-
-    .right1 {
-        bottom: 10%;
-    }
-
     .row {
         margin: 0px;
     }
@@ -406,31 +377,31 @@ img {
         width: 100%;
     }
 
-    .left2.upper {
+    .left.upper {
         padding: 40px 40px 0px 40px;
     }
 
-    .left2.upper {
+    .left.upper {
         position: absolute;
         z-index: 2;
     }
 
-    .right2.upper {
+    .right.upper {
         opacity: 70%;
         position: absolute;
         z-index: 1;
     }
 
-    .right2.lower {
+    .right.lower {
         padding: 40px 40px 0px 40px;
     }
 
-    .right2.lower {
+    .right.lower {
         position: absolute;
         z-index: 2;
     }
 
-    .left2.lower {
+    .left.lower {
         opacity: 70%;
         position: absolute;
         z-index: 1;
@@ -438,6 +409,12 @@ img {
 
     footer {
         margin-top: 0px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .name {
+        font-size: 20px;
     }
 }
 
@@ -461,13 +438,13 @@ img {
     transform: translate(0, -13px) rotate(45deg);
 }
 
-.about {
+.species {
     display: none;
     padding: 100px;
     text-align: justify;
 }
 
-.about p {
+.species p {
     margin-bottom: 20px;
 }
 
@@ -476,24 +453,22 @@ img {
 }
 
 .contact h1 {
-    padding: 100px 100px 20px 90px;
+    padding: 100px 100px 20px 100px;
 } 
 
-.contact ul {
+.contact p {
     padding: 0px 100px 100px 100px;
     margin-bottom: 120px;
-}
-
-.contact ul li {
     width: 100%;
 }
 
-.contact ul li a {
+.contact p a {
+    color: black;
     padding: 0;
     text-align: left;
     text-decoration: underline;
 }
 
-.contact ul li a:hover {
-    background-color: transparent;
+.contact p a:hover {
+    color: dimgray;
 }
