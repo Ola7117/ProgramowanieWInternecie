@@ -25,8 +25,9 @@ button:hover {
 .cookies {
     background-color: dimgray;
     bottom: 0;
+    display: flex;
     opacity: 70%;
-    padding: 10px;
+    padding: 5px 20px;
     position: fixed;
     width: 100%;
     z-index: 2;
@@ -34,15 +35,14 @@ button:hover {
 
 .cookiesClose {
     background-image: url("closeIcon.png");
-    float: right;
-    margin: 10px;
     background-origin: content-box;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    height: 70px;
-    padding: 10px;
-    width: 70px;
+    float: right;
+    height: 50px;
+    margin: 10px;
+    width: 50px;
 }
 
 .cookiesClose:hover {
@@ -50,10 +50,13 @@ button:hover {
 }
 
 .cookiesText {
+    align-items: center;
+    display: flex;
     float: left;
+    justify-content: center;
     overflow: hidden;
     text-align: center;
-    width: 80%;
+    width: 90%;
 }
 
 footer {
@@ -202,6 +205,10 @@ img {
 }
 
 @media screen and (max-width: 800px) {
+    footer .species {
+        display: none;
+    }
+
     nav ul {
         display: none;
     }
