@@ -22,7 +22,42 @@ button:hover {
     color: white;
 }
 
+.cookies {
+    background-color: dimgray;
+    bottom: 0;
+    opacity: 70%;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+
+.cookiesClose {
+    background-image: url("closeIcon.png");
+    float: right;
+    margin: 10px;
+    background-origin: content-box;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 70px;
+    padding: 10px;
+    width: 70px;
+}
+
+.cookiesClose:hover {
+    background-color: lightgray;
+}
+
+.cookiesText {
+    float: left;
+    overflow: hidden;
+    text-align: center;
+    width: 80%;
+}
+
 footer {
+    position: relative;
     background-color: rgb(243, 240, 240);
     bottom: 0;
     font-size: 16px;
@@ -52,7 +87,7 @@ header {
 
 header a, li a {
     color: black;
-    display: block;
+    display: inline-block;
     overflow: hidden;
     padding: 20px;
     text-decoration: none;
@@ -251,6 +286,15 @@ img {
 }
 
 @media screen and (max-width: 640px) {
+    .homeText {
+        display: none;
+    }
+
+    .homeIcon {
+        display: block;
+        float: left;
+    }
+    
     nav ul {
         display: none;
     }
@@ -316,15 +360,6 @@ img {
         background-color: rgb(203, 218, 192);
         display: block;
         height: 70px;
-    }
-
-    .homeText {
-        display: none;
-    }
-
-    .homeIcon {
-        display: block;
-        float: left;
     }
 
     .menuIcon {
@@ -414,13 +449,36 @@ img {
 }
 
 @media screen and (max-width: 350px) {
+    header {
+        font-size: 20px;
+        letter-spacing: 0;
+        margin: 0;
+    }
+
+    header a {
+        padding: 20px 5px;
+    }
+
+    nav {
+        margin: 0;
+    }
+
     .name {
         font-size: 20px;
     }
 }
 
-@media screen and (max-width: 200px) {
+@media screen and (max-width: 250px) {
+    header {
+        display: grid;
+    }
+
+    header a {
+        padding-left: 20px;
+    }
+
     .name {
+        top: 40%;
         word-wrap: break-word;
     }
 }
@@ -448,10 +506,12 @@ img {
 .species {
     display: none;
     height: 100%;
+    word-wrap: break-word;
 }
 
 .speciesStart {
     font-size: 40px;
+    overflow: hidden;
     padding: 100px 100px 20px 100px;
 }
 

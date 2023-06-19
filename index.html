@@ -5,20 +5,25 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Bearly Knowledgeable</title>
 		<link rel="stylesheet" href="styleNew.css">
-		<script src="script.js"></script>
+		<script src="cookies.js"></script>
+		<script src="language.js"></script>
+		<script src="RWD.js"></script>
+		<script src="SPA.js"></script>
 	</head>
 	<body>
 		<div class="top">
 			<div class="navbar" id="navbar">
 				<header>
 					<a href="#home" class="homeIcon" onclick="changeContentToHome()"></a>
-					<a href="#home" class="homeText" onclick="changeContentToHome()">Strona główna</a>
+					<a href="#home" id="homeText" class="homeText" onclick="changeContentToHome()"></a>
+					<a href="#" id="pl" onClick="changeLanguage('pl')">PL</a>
+					<a href="#" id="en" onClick="changeLanguage('en')">EN</a>
 				</header>
 				<div class="blankSpace"></div>
 				<nav>
 					<ul>
-						<li><a href="#speciesStart" onclick="changeContentToSpecies()">Gatunki</a></li>
-						<li><a href="#contactStart" onclick="changeContentToContact()">Kontakt</a></li>
+						<li><a href="#speciesStart" id="speciesNav" onclick="changeContentToSpecies()"></a></li>
+						<li><a href="#contactStart" id="contactNav" onclick="changeContentToContact()"></a></li>
 					</ul>
 					<a href="javascript:void(0);" class="menuIcon" onclick="toggleMenu(this)">
 						<div class="stripe1"></div>
@@ -36,20 +41,16 @@
 				<img src="smallBear.jpg" alt="smallBear">
 			</div>
 			<div class="column right classic">
-				<h1>Witaj na mojej stronie</h1>
-				<p>
-					Jest ona poświęcona niedźwiedziom. Niedźwiedziowate to rodzina ssaków zawierająca osiem występujących współcześnie gatunków - andoniedźwiedzia okularowego, biruanga malajskiego, niedźwiedzia brunatnego, niedźwiedzia czarnego, niedźwiedzia himalajskiego, niedźwiedzia polarnego, pandę wielką oraz wargacza leniwego. Znajdziesz tutaj ich zdjęcia oraz kilka informacji. Mam nadzieję, że dowiesz się czegoś ciekawego :)
-				</p>
+				<h1 id="welcomeHeader"></h1>
+				<p id="welcomeText"></p>
 			</div>
 		</div>
 		<div class="species" id="species">
-			<h1 class="speciesStart" id="speciesStart">Gatunki</h1>
+			<h1 class="speciesStart" id="speciesStart"></h1>
 			<div class="row">
 				<div class="column left alternative">
-					<h1>Andoniedźwiedź okularowy</h1>
-					<p> 
-						[tekst]
-					</p>
+					<h1 id="spectacledBearHeader"></h1>
+					<p id="spectacledBearText"></p>
 				</div>
 				<div class="column right alternative">
 					<img src="spectacledBear.jpg" alt="spectacledBear">
@@ -60,18 +61,14 @@
 					<img src="sunBear.jpg" alt="sunBear">
 				</div>
 				<div class="column right classic">
-					<h1>Biruang malajski</h1>
-					<p> 
-						[tekst]
-					</p>
+					<h1 id="sunBearHeader"></h1>
+					<p id="sunBearText"></p>
 				</div>
 			</div>
 			<div class="row">
 				<div class="column left alternative">
-					<h1>Niedźwiedź brunatny</h1>
-					<p> 
-						[tekst]
-					</p>
+					<h1 id="brownBearHeader"></h1>
+					<p id="brownBearText"></p>
 				</div>
 				<div class="column right alternative">
 					<img src="brownBear.jpg" alt="brownBear">
@@ -82,18 +79,14 @@
 					<img src="americanBlackBear.jpg" alt="americanBlackBear">
 				</div>
 				<div class="column right classic">
-					<h1>Niedźwiedź czarny</h1>
-					<p> 
-						[tekst]
-					</p>
+					<h1 id="americanBlackBearHeader"></h1>
+					<p id="americanBlackBearText"></p>
 				</div>
 			</div>
 			<div class="row">
 				<div class="column left alternative">
-					<h1>Niedźwiedź himlajaski</h1>
-					<p> 
-						[tekst]
-					</p>
+					<h1 id="asianBlackBearHeader"></h1>
+					<p id="asianBlackBearText"></p>
 				</div>
 				<div class="column right alternative">
 					<img src="asianBlackBear.jpg" alt="asianBlackBear">
@@ -104,18 +97,14 @@
 					<img src="polarBear.jpg" alt="polarBear">
 				</div>
 				<div class="column right classic">
-					<h1>Niedźwiedź polarny</h1>
-					<p> 
-						[tekst]
-					</p>
+					<h1 id="polarBearHeader"></h1>
+					<p id="polarBearText"></p>
 				</div>
 			</div>
 			<div class="row">
 				<div class="column left alternative">
-					<h1>Panda wielka</h1>
-					<p> 
-						[tekst]
-					</p>
+					<h1 id="pandaBearHeader"></h1>
+					<p id="pandaBearText"></p>
 				</div>
 				<div class="column right alternative">
 					<img src="pandaBear.jpg" alt="pandaBear">
@@ -126,16 +115,18 @@
 					<img src="slothBear.jpg" alt="slothBear">
 				</div>
 				<div class="column right classic">
-					<h1>Wargacz leniwy</h1>
-					<p> 
-						[tekst]
-					</p>
+					<h1 id="slothBearHeader"></h1>
+					<p id="slothBearText"></p>
 				</div>
 			</div>
 		</div>
 		<div class="contact" id="contact">
-			<h1 id="contactStart">Kontakt</h1>
-				<p>Jeśli masz jakąś sugestię co do strony, możesz wysłać mi wiadomość na adres: <a href="mailto:bearlyknowledgeable@example.com">bearlyknowledgeable@example.com</a>.</p>
+			<h1 id="contactStart"></h1>
+				<p id="contactText"></p>
+		</div>
+		<div class="cookies" id="cookies">
+			<div class="cookiesText" id="cookiesText"></div>
+			<a class="cookiesClose" href="#" id="cookiesClose" onclick="closeCookies()"></a>
 		</div>
 		<footer>
 			<p>&copy;2023 Aleksandra Hinc</p>
